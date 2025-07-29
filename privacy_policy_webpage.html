@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Your Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #73C045 0%, #73C045 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #73C045, #73C045);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 1rem;
+            padding: 10px 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .toc {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-left: 4px solid #73C045;
+        }
+
+        .toc h3 {
+            margin-bottom: 15px;
+            color: #73C045;
+            font-size: 1.2rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+
+        .toc a {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+
+        .toc a:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(5px);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            border-bottom: 3px solid #73C045;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .section h2::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #73C045, #73C045);
+            border-radius: 2px;
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
+            color: #34495e;
+            font-weight: 600;
+        }
+
+        .section h4 {
+            font-size: 1.1rem;
+            margin: 20px 0 10px 0;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        .section ul, .section ol {
+            margin: 15px 0 15px 25px;
+            color: #555;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+            border-left: 4px solid #73C045;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #73C045, #73C045);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #73C045, #73C045);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #73C045, #73C045);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .toc ul {
+                columns: 1;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #73C045, #73C045);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Privacy Policy of Project Verba</h1>
+            <div class="last-updated">Last updated: July 29, 2025</div>
+        </div>
+
+        <div class="content">
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#information-collect">2. Information We Collect</a></li>
+                    <li><a href="#information-use">3. How We Use Information</a></li>
+                    <li><a href="#information-share">4. How We Share Information</a></li>
+                    <li><a href="#data-security">5. Data Security</a></li>
+                    <li><a href="#data-retention">6. Data Retention</a></li>
+                    <li><a href="#your-rights">7. Your Rights and Choices</a></li>
+                    <li><a href="#cookies">8. Cookies and Tracking</a></li>
+                    <li><a href="#third-party">9. Third-Party Links</a></li>
+                    <li><a href="#children">10. Children's Privacy</a></li>
+                    <li><a href="#international">11. International Transfers</a></li>
+                    <li><a href="#changes">12. Policy Changes</a></li>
+                    <li><a href="#contact">13. Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="section" id="introduction">
+                <h2>1. Introduction</h2>
+                <p>This Privacy Policy describes how <strong>Project Verba</strong> collects, uses, and shares information about you when you use our services, including our website, mobile application, and loyalty program (collectively, the "Services").</p>
+                
+                <div class="highlight-box">
+                    <p><strong>By using our Services, you agree to the collection and use of information in accordance with this Privacy Policy.</strong></p>
+                </div>
+            </div>
+
+            <div class="section" id="information-collect">
+                <h2>2. Information We Collect</h2>
+                
+                <h3>2.1 Information You Provide to Us</h3>
+                <p>We collect information you provide directly to us, including:</p>
+                <ul>
+                    <li><strong>Account Information:</strong> Name, email address, phone number, date of birth, and password</li>
+                    <li><strong>Profile Information:</strong> Additional details like profile picture, preferences, and interests</li>
+                    <li><strong>Transaction Information:</strong> Purchase details, payments, and loyalty program activities</li>
+                    <li><strong>Communication Information:</strong> Customer service inquiries and feedback</li>
+                    <li><strong>Survey Information:</strong> Responses to surveys, questionnaires, or feedback forms</li>
+                </ul>
+
+                <h3>2.2 Information We Collect Automatically</h3>
+                <p>When you use our Services, we automatically collect:</p>
+                <ul>
+                    <li><strong>Device Information:</strong> Device type, operating system, browser type, IP address</li>
+                    <li><strong>Usage Information:</strong> Pages visited, features used, time spent on Services</li>
+                    <li><strong>Location Information:</strong> General location based on IP address</li>
+                    <li><strong>Cookies and Similar Technologies:</strong> Information collected through tracking technologies</li>
+                </ul>
+
+                <h3>2.3 Information from Third Parties</h3>
+                <p>We may receive information about you from:</p>
+                <ul>
+                    <li>Business partners and loyalty program merchants</li>
+                    <li>Social media platforms you connect to our Services</li>
+                    <li>Third-party data providers for demographic information</li>
+                    <li>Public sources that help us serve you better</li>
+                </ul>
+            </div>
+
+            <div class="section" id="information-use">
+                <h2>3. How We Use Your Information</h2>
+                
+                <h3>3.1 Providing and Improving Services</h3>
+                <ul>
+                    <li>Operating and maintaining our Services</li>
+                    <li>Processing transactions and managing your loyalty account</li>
+                    <li>Providing customer support and responding to inquiries</li>
+                    <li>Personalizing your experience and providing relevant content</li>
+                    <li>Developing new features and improving existing Services</li>
+                </ul>
+
+                <h3>3.2 Communication</h3>
+                <ul>
+                    <li>Sending account-related communications</li>
+                    <li>Providing promotional offers and marketing communications</li>
+                    <li>Sending loyalty program updates and reward notifications</li>
+                    <li>Conducting surveys and requesting feedback</li>
+                </ul>
+
+                <h3>3.3 Security and Compliance</h3>
+                <ul>
+                    <li>Protecting against fraud, abuse, and security threats</li>
+                    <li>Complying with legal obligations and enforcing our terms</li>
+                    <li>Resolving disputes and investigating violations</li>
+                    <li>Maintaining records for business and legal purposes</li>
+                </ul>
+            </div>
+
+            <div class="section" id="information-share">
+                <h2>4. How We Share Your Information</h2>
+                
+                <p>We may share your information in the following circumstances:</p>
+                
+                <h3>4.1 With Your Consent</h3>
+                <p>We share information when you explicitly consent to such sharing.</p>
+
+                <h3>4.2 Service Providers</h3>
+                <p>We share information with third-party service providers including payment processors, cloud storage providers, marketing services, and customer support platforms.</p>
+
+                <h3>4.3 Business Partners</h3>
+                <p>We may share information with loyalty program partners and merchants to process transactions, provide promotions, and enable cross-platform benefits.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Legal Requirements:</strong> We may disclose information when required by law, court orders, or to protect our rights and prevent fraud.</p>
+                </div>
+            </div>
+
+            <div class="section" id="data-security">
+                <h2>5. Data Security</h2>
+                
+                <p>We implement comprehensive security measures to protect your information:</p>
+                <ul>
+                    <li>Encryption of sensitive data in transit and at rest</li>
+                    <li>Regular security assessments and vulnerability testing</li>
+                    <li>Access controls and authentication mechanisms</li>
+                    <li>Employee training on data protection practices</li>
+                    <li>Incident response procedures</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> No method of transmission over the internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+                </div>
+            </div>
+
+            <div class="section" id="data-retention">
+                <h2>6. Data Retention</h2>
+                
+                <p>We retain your information for as long as necessary to provide our Services and fulfill the purposes outlined in this Privacy Policy. Retention periods depend on:</p>
+                <ul>
+                    <li>The type of information collected</li>
+                    <li>The purpose for which it was collected</li>
+                    <li>Legal and regulatory requirements</li>
+                    <li>Your account status and activity level</li>
+                </ul>
+                <p>When information is no longer needed, we securely delete or anonymize it.</p>
+            </div>
+
+            <div class="section" id="your-rights">
+                <h2>7. Your Rights and Choices</h2>
+                
+                <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+                
+                <h3>7.1 Access and Portability</h3>
+                <ul>
+                    <li>Request access to your personal information</li>
+                    <li>Receive a copy of your data in a portable format</li>
+                </ul>
+
+                <h3>7.2 Correction and Updates</h3>
+                <ul>
+                    <li>Correct inaccurate or incomplete information</li>
+                    <li>Update your account information and preferences</li>
+                </ul>
+
+                <h3>7.3 Deletion</h3>
+                <ul>
+                    <li>Request deletion of your personal information</li>
+                    <li>Close your account and remove associated data</li>
+                </ul>
+
+                <h3>7.4 Marketing Communications</h3>
+                <ul>
+                    <li>Opt out of promotional emails and notifications</li>
+                    <li>Manage communication preferences in your account settings</li>
+                </ul>
+            </div>
+
+            <div class="section" id="cookies">
+                <h2>8. Cookies and Tracking Technologies</h2>
+                
+                <p>We use cookies and similar technologies to:</p>
+                <ul>
+                    <li>Remember your preferences and settings</li>
+                    <li>Authenticate your account and maintain security</li>
+                    <li>Analyze usage patterns and improve our Services</li>
+                    <li>Provide personalized content and advertisements</li>
+                </ul>
+
+                <h3>Types of Cookies We Use:</h3>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Necessary for basic website functionality</li>
+                    <li><strong>Performance Cookies:</strong> Help us analyze website usage and performance</li>
+                    <li><strong>Functionality Cookies:</strong> Remember your preferences</li>
+                    <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements</li>
+                </ul>
+            </div>
+
+            <div class="section" id="third-party">
+                <h2>9. Third-Party Links and Services</h2>
+                
+                <p>Our Services may contain links to third-party websites or integrate with third-party services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies before providing any information.</p>
+            </div>
+
+            <div class="section" id="children">
+                <h2>10. Children's Privacy</h2>
+                
+                <div class="highlight-box">
+                    <p><strong>Our Services are not intended for children under 13 years of age.</strong> We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will take steps to delete such information promptly.</p>
+                </div>
+            </div>
+
+            <div class="section" id="international">
+                <h2>11. International Data Transfers</h2>
+                
+                <p>If you are located outside of Ukraine, your information may be transferred to and processed in countries where our servers are located. We implement appropriate safeguards including:</p>
+                <ul>
+                    <li>Standard contractual clauses</li>
+                    <li>Adequacy decisions by relevant authorities</li>
+                    <li>Other lawful transfer mechanisms</li>
+                </ul>
+            </div>
+
+            <div class="section" id="changes">
+                <h2>12. Changes to This Privacy Policy</h2>
+                
+                <p>We may update this Privacy Policy from time to time. We will notify you of material changes by:</p>
+                <ul>
+                    <li>Posting the updated policy on our website</li>
+                    <li>Sending email notifications to registered users</li>
+                    <li>Displaying prominent notices in our Services</li>
+                </ul>
+                <p>Your continued use of our Services after changes become effective constitutes acceptance of the updated Privacy Policy.</p>
+            </div>
+
+            <div class="section" id="contact">
+                <h2>13. Contact Us</h2>
+                
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>If you have questions about this Privacy Policy or our data practices:</p>
+                    <p><strong>Email:</strong> projectverba@gmail.com</p>
+                    <p><strong>Phone:</strong> +38(063)4207279</p>
+                    <p><strong>Address:</strong> Chokolivskyi Boulevard, 13, Kyiv, 02000</p>
+                </div>
+
+                <div class="highlight-box">
+                    <p><strong>For EU residents:</strong> You have the right to lodge a complaint with your local data protection authority.</p>
+                    <p><strong>For California residents:</strong> Additional rights apply under the CCPA. Contact us for more information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        // Smooth scrolling for TOC links
+        document.querySelectorAll('.toc a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        const scrollIndicator = document.getElementById('scrollIndicator');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset;
+            const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / documentHeight) * 100;
+            
+            // Update scroll indicator
+            scrollIndicator.style.width = scrollPercent + '%';
+
+            // Show/hide back to top button
+            if (scrollTop > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
